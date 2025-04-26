@@ -96,7 +96,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geo
 
     // Initialize depth intervals and colors for the legend
     let depths =[-10, 10, 30, 50, 70, 90];
-    let colors =['#00ff00', '#ccff66', '#ffff99', '#ff9933', '#ff6600', '#cc3300']
+    let colors =['#00ff00', '#ccff66', '#ffff99', '#ff9933', '#ff6600', '#cc3300'];
     // Loop through our depth intervals to generate a label with a colored square for each interval.
     for (let i=0; i < depths.length -1; i++){
       div.innerHTML += '<i class="color-square" style="background:' + colors[i]+ '"></i>' + depths[i]+ '&ndash; ' + depths[i+1]+'<br>';
@@ -107,6 +107,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geo
 
   // Finally, add the legend to the map.
 legend.addTo(map);
+
 
   // OPTIONAL: Step 2
   // Make a request to get our Tectonic Plate geoJSON data.
